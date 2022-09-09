@@ -1,0 +1,8 @@
+alias work='cd /mnt/d/work'
+alias zno='cd /mnt/d/work/zno'
+alias zni='cd /mnt/d/work/zni'
+alias home='cd /mnt/d/Gitlab/homedatastore/home'
+alias ll='ls -l'
+alias lla='ls -la'
+alias tmp='cd /mnt/d/tmp'
+alias asuzd='cd /mnt/d/TFSProjects/ИС\ АСУ\ ЖД/АСУЖД\ ОМК-ИТ'
