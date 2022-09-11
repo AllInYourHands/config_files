@@ -1,11 +1,12 @@
 
-vimcolor='/usr/share/vim/vim82/colors'
+vimcolor82='/usr/share/vim/vim82/colors'
+vimcolor80='/usr/share/vim/vim80/colors'
 inputrc='/etc'
 
 function Status() {
     if  [ $? -eq 0 ] 
-        then  echo -e "\e[32;1m [ OK ] \e[0m $2$1"
-    else echo -e "\e[31;1m [ ** ] \e[0m $2$1"
+        then  echo -e "\e[32;1m [ OK ] \e[0m $2/$1"
+    else echo -e "\e[31;1m [ ** ] \e[0m $2/$1"
     fi
 }
 
@@ -29,9 +30,17 @@ file='.tmux.conf'
 cp $file $HOME
 Status $file $HOME
 
-file='my.vim'
-sudo cp $file $vimcolor
-Status $file $vimcolor
+if [ -a $vimcolor82 ]
+    then
+        file='my.vim'
+        sudo cp $file $vimcolor82
+        Status $file $vimcolor82
+elif [ -a $vimcolor80 ]
+    then
+        file='my.vim'
+        sudo cp $file $vimcolor80
+        Status $file $vimcolor80
+fi
 
 file='inputrc'
 sudo cp $file $inputrc
