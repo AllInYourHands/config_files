@@ -23,3 +23,5 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+" start with table mode)
+let g:table_mode_always_active = 1
