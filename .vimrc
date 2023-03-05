@@ -20,8 +20,12 @@ set background=dark
 call plug#begin('~/.vim/plugged')
 
   Plug 'dhruvasagar/vim-table-mode'
+  Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
 
 call plug#end()
 
 " start with table mode)
 let g:table_mode_always_active = 1
+
+" mappings
+map <C-n> :NERDTreeToggle<CR>
