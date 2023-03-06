@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'dhruvasagar/vim-table-mode'
   Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
+  Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -29,3 +30,4 @@ let g:table_mode_always_active = 1
 
 " mappings
 map <C-n> :NERDTreeToggle<CR>
+map <Leader> <Plug>(easymotion-prefix)
