@@ -27,7 +27,7 @@ call plug#end()
 
 " start with table mode)
 let g:table_mode_always_active = 1
-
+let g:mapleader=','
 " mappings
 map <C-n> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
